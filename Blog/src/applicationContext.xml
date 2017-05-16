@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+<bean id="dbutil" class="com.database.DBUtil"></bean>
+<bean id="blogger" class="com.model.Blogger"></bean>
+<bean id="adminer" class="com.model.Adminer"></bean>
+<bean id="b_article" class="com.model.B_article"></bean>
+<bean id="admin_server" class="com.server.Admin_server"> </bean>
+<bean id="blogger_server" class="com.server.Blogger_server"></bean>
+<bean id="visitor_server" class="com.server.Visitor_server"></bean>
+<bean id="dologin" class="com.login.Dologin"></bean>
+</beans>

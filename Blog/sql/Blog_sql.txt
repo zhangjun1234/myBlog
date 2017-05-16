@@ -1,0 +1,29 @@
+CREATE database Blog;
+use Blog
+CREATE TABLE Blogger(
+    blogger_id   TINYINT primary key auto_increment,
+    blogger_name VARCHAR(20) not null,
+    blogger_password VARCHAR(10),
+	blogger_sex     VARCHAR(10),
+	blogger_age     TINYINT,
+	blogger_birth   DATE
+    );
+CREATE TABLE Visitor(
+    visitor_id   TINYINT  auto_increment,
+	visit_title   VARCHAR(30)   ,
+	visitor_message    VARCHAR(300),
+        blogger_reply      VARCHAR(300),
+	constraint pk primary key(visitor_id,visit_title)
+  );
+ CREATE TABLE Adminer(
+    adminer_id   TINYINT primary key auto_increment,
+    adminer_name VARCHAR(20) not null,
+    adminer_password VARCHAR(10)
+    );
+CREATE TABLE B_article(
+    blogger_id   TINYINT  ,
+    article_title VARCHAR(20) ,
+    article_content VARCHAR(5000),
+	article_review   VARCHAR(500),
+	constraint pk primary key(blogger_id,article_title)
+    );
